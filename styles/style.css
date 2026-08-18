@@ -10,7 +10,6 @@
 }
 
 .header {
-    --min-height: 668px;
     height: 100vh;
     min-height: var(--min-height);
     font: inherit;
@@ -145,7 +144,6 @@
 }
 
 .footer {
-    --min-height: 668px;
     height: 100vh;
     min-height: var(--min-height);
     position: relative;
@@ -229,7 +227,7 @@
     position: absolute;
     width: 10px;
     top: calc( var(--decoration-gap) - 10px) ;
-    right: calc( var(--decoration-gap) + 50px);
+    right: calc( var(--decoration-gap) + var(--rec_empty_x_pos));
 }
 
 .rec_empty::before {
@@ -265,13 +263,9 @@
         font-size: clamp(7.5rem, 0.563rem + 14.453vw, 15rem);
     }
 
-    .rec_empty {
-        --rec_empty_x_pos: 35px;
-    }
-
     .header {
         margin-block-end: 40px;
-        --min-height: 1024px;
+        min-height: var(--min-height);
     }
 
     .gallery {
@@ -286,7 +280,7 @@
     }
 
     .footer {
-        --min-height: 1024px;
+        min-height: var(--min-height);
     }
 
     .sunset_pic {
@@ -327,7 +321,7 @@
         margin-top: 20px;
     }
 
-    .section_why {
+    .section_list {
         display: grid;
         grid-template-columns: 1fr 2fr;
         grid-template-areas:
@@ -368,17 +362,13 @@
 /*Большой экран*/
 @media (width >= 1024px) {
 
-    .rec_empty {
-        --rec_empty_x_pos: 40px;
-    }
-
     .header {
         margin-block-end: 0;
-        --min-height: 768px;
+        min-height: var(--min-height);
     }
 
     .footer {
-        --min-height: 768px;
+        min-height: var(--min-height);
         margin-top: 50px;
     }
 
@@ -399,7 +389,7 @@
         margin-top: 20px;
     }
 
-    .answers_why {
+    .answers_list {
         margin-top: 0;
     }
 
@@ -444,7 +434,7 @@
         grid-area: question_what;
     }
 
-    .answers_what {
+    .answers_list_row {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;

@@ -17,3 +17,17 @@
     --corner-thickness: 1px;
     --rec_empty_x_pos: 30px;
 }
+
+@media (width >= 768px) {
+    :root {
+        --min-height: 1024px;
+        --rec_empty_x_pos: 35px;
+    }
+}
+
+@media (width >= 1024px) {
+    :root {
+        --min-height: 768px;
+        --rec_empty_x_pos: 35px;
+    }
+}
